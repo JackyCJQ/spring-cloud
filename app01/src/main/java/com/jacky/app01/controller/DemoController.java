@@ -1,5 +1,6 @@
 package com.jacky.app01.controller;
 
+import com.jacky.app01.client.DemoClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +27,9 @@ public class DemoController {
     @Autowired
     private RestTemplate restTemplate;
 
+    @Autowired
+    private DemoClient demoClient;
+
     /**
      * 发现其他服务
      *
@@ -38,14 +42,21 @@ public class DemoController {
                 .findFirst();
     }
 
-    @RequestMapping("/demo.do")
-    public String demo() {
-        return "hello,world";
-    }
-
     @GetMapping("/discoveryClient")
     public String discoveryPing() throws RestClientException, ServiceUnavailableException {
         URI service = serviceUrl().map(s -> s.resolve("/demo/demo.do")).orElseThrow(ServiceUnavailableException::new);
         return restTemplate.getForEntity(service, String.class).getBody();
     }
+
+    @RequestMapping("/demo.do")
+    public String demo() {
+        return "hello,world";
+    }
+
+    @RequestMapping("/demo1.do")
+    public String demo1() {
+        return demoClient.demo();
+    }
+
+
 }

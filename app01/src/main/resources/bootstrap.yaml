@@ -8,7 +8,9 @@ spring:
       discovery:
         service-name: ${spring.application.name}-${server.port}
         health-check-path: /demo/demo.do
+        register: false
       config:
-        enabled: true
+        enabled: false
+
 server:
   port: 8081
