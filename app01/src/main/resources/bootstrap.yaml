@@ -14,3 +14,9 @@ spring:
 
 server:
   port: 8081
+logging:
+  path: ${user.dir}/logs/${mofa.app.stack:default}
+  file: ${logging.path}/${spring.application.name}.log
+mofa:
+  app:
+   instance: ${spring.application.name}

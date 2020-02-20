@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="logback-defaults.xml"/>
+
+    <root level="INFO">
+        <springProfile name="debug">
+            <appender-ref ref="CONSOLE"/>
+        </springProfile>
+        <appender-ref ref="ERROR-FILE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+    <springProfile name="debug">
+        <logger name="io.mobike" level="DEBUG"/>
+    </springProfile>
+
+</configuration>
