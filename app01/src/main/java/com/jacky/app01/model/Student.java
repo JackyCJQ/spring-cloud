@@ -1,4 +1,4 @@
-package com.jacky.app01.Model;
+package com.jacky.app01.model;
 
 import lombok.Data;
 

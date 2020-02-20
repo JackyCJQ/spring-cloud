@@ -1,6 +1,6 @@
 package com.jacky.app01.controller;
 
-import com.jacky.app01.Model.Student;
+import com.jacky.app01.model.Student;
 import com.jacky.app01.client.DemoClient;
 import com.oracle.tools.packager.Log;
 import lombok.extern.slf4j.Slf4j;
