@@ -20,7 +20,6 @@ public class DemoController {
         return "hello,world";
     }
 
-
     @RequestMapping("/demo1.do")
     public String demo1() {
         return demoClient.demo();
