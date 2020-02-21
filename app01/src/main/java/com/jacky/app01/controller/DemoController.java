@@ -1,8 +1,7 @@
 package com.jacky.app01.controller;
 
-import com.jacky.app01.model.Student;
 import com.jacky.app01.client.DemoClient;
-import com.oracle.tools.packager.Log;
+import com.jacky.app01.model.Student;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -54,11 +53,12 @@ public class DemoController {
 
     @RequestMapping("/demo.do")
     public String demo() {
-        Student d=new Student();
+        Student d = new Student();
         d.setName("sss");
         log.info("log,{}", d);
         return "hello,world";
     }
+
     @RequestMapping("/demo1.do")
     public String demo1() {
         return demoClient.demo();
