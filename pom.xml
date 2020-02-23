@@ -7,6 +7,7 @@
         <module>app01</module>
         <module>app02</module>
         <module>base</module>
+        <module>app03</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
