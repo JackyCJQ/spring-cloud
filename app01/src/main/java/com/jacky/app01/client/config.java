@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
  * @author chenjiaqi
  * @create 2020-02-21
  */
-@Configuration
+//@Configuration
 public class config {
     public TestFallBackFactory testFallBackFactory() {
         return new TestFallBackFactory();

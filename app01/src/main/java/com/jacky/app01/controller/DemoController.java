@@ -1,6 +1,5 @@
 package com.jacky.app01.controller;
 
-import com.jacky.app01.client.DemoClient;
 import com.jacky.app01.model.Student;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,8 +29,8 @@ public class DemoController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @Autowired
-    private DemoClient demoClient;
+//    @Autowired
+//    private DemoClient demoClient;
 
     /**
      * 发现其他服务
@@ -59,10 +58,10 @@ public class DemoController {
         return "hello,world";
     }
 
-    @RequestMapping("/demo1.do")
-    public String demo1() {
-        return demoClient.demo();
-    }
+//    @RequestMapping("/demo1.do")
+//    public String demo1() {
+//        return demoClient.demo();
+//    }
 
 
 }

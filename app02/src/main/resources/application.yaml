@@ -9,3 +9,5 @@ spring:
         service-name: ${spring.application.name}-${server.port}
 server:
   port: 8082
+
+artifactId: @artifactId@
