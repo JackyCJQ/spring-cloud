@@ -1,6 +1,8 @@
 package com.jacky.app03.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -9,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class DemoController {
-    @RequestMapping("/demo")
-    public String demo() {
-        return "hello,world";
+    @RequestMapping(value = "/order",method = RequestMethod.POST)
+    public String demo(@RequestParam(value = "orderId", required = false) String orderId) {
+        return "Hello World";
     }
 }

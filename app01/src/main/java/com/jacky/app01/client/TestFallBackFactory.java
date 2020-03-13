@@ -14,7 +14,6 @@ public class TestFallBackFactory implements FallbackFactory<TestClient> {
     public TestClient create(Throwable throwable) {
         log.error("TestFallBackFactory fallback reason was: {} ", throwable.getMessage(), throwable);
         return new TestClient() {
-
             @Override
             public OrderPriceModel calculatePrice() {
                 return null;
